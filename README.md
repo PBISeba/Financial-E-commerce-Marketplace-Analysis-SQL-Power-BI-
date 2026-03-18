@@ -8,6 +8,21 @@ The project focuses on financial performance, customer structure, and product ca
 
 ---
 
+
+## Business Problem
+
+E-commerce marketplaces generate large volumes of transactional data, but extracting actionable insights about revenue drivers, customer distribution, and product performance can be challenging.
+
+The key business questions addressed in this project:
+
+• Which regions generate the majority of revenue?  
+• How concentrated is revenue across customers and locations?  
+• Which product categories drive the highest value vs volume?  
+• Are there high-demand but low-value segments?  
+
+The goal is to transform raw transactional data into clear, decision-support insights.
+
+---
 ## Project Overview
 
 This project combines SQL-based data preparation with Power BI data modeling and visualization.
@@ -30,18 +45,42 @@ The dashboard focuses on:
 ![Dashboard Preview](screenshots/Product_Analysis.png)
 ---
 
-## SQL Data Preparation
+## 🧠 SQL Data Preparation
 
-Part of the data transformation logic was implemented in SQL before loading into Power BI.
+The data transformation layer was implemented using SQL views to create a structured and analysis-ready dataset before loading into Power BI.
 
-Key SQL components:
+Instead of performing all transformations in Power BI, a dedicated SQL layer was introduced to:
 
-• Aggregated monthly revenue (aggregate_monthly_sales)  
-• Top customers ranking (aggregate_top_customers)  
-• Data cleaning and transformation logic  
-• Pre-calculated metrics to improve performance  
+• simplify the data model  
+• improve performance  
+• separate transformation logic from reporting  
+• ensure data consistency across analytical use cases  
 
-This approach reduces model complexity, improves performance, and separates transformation logic from the reporting layer.
+### Key SQL transformations
+
+The solution is based on multiple SQL views:
+
+• `v_sales` – base fact view combining orders, customers, and revenue  
+• `v_customer` – cleaned customer dimension with deduplicated location data  
+• `dim_product_category` – standardized product categories (translated to English)  
+
+---
+
+### Example: Fact View (v_sales)
+
+```sql
+CREATE VIEW v_sales AS
+SELECT
+    o.order_id,
+    o.order_purchase_timestamp::date AS order_date,
+    c.customer_unique_id,
+    oi.product_id,
+    oi.price + oi.freight_value AS revenue
+FROM olist_orders_dataset o
+JOIN olist_order_items_dataset oi
+    ON o.order_id = oi.order_id
+JOIN olist_customers_dataset c
+    ON o.customer_id = c.customer_id;
 
 ---
 
@@ -128,6 +167,17 @@ Key insights:
 
 ### SQL vs DAX (Work in Progress)
 
+
+---
+
+
+## Key Insights
+
+• Revenue is highly concentrated – a small number of states generate the majority of total revenue (Pareto effect)  
+• The top-performing state significantly outperforms others in both customer volume and total revenue  
+• Some product categories generate high order volume but relatively lower revenue, indicating lower-value transactions  
+• High-revenue categories are not always the ones with the highest demand, highlighting premium vs mass segments  
+• Customer behavior is largely transactional, with most users placing only a single order
 
 ---
 

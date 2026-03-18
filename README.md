@@ -122,7 +122,7 @@ Additional helper tables were implemented for dynamic report features (Top-N, cu
 
 ---
 
-## Key Features
+## Technical Highlights
 
 • Dynamic currency switch (BRL / USD)  
 • Top-N analysis with automatic "Others" grouping  

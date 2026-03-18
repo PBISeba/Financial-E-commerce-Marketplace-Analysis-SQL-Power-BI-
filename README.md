@@ -31,9 +31,11 @@ This approach reduces model complexity in Power BI and improves report performan
 The report uses a star schema model with SQL-based pre-aggregations.
 
 Fact table:
+
 • fact_sales – transactional order data
 
 Dimensions:
+
 • dim_calendar  
 • dim_customer  
 • dim_product_category  

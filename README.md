@@ -25,7 +25,7 @@ The dashboard focuses on:
 ## Dashboard Preview
 
 ![Dashboard Preview](screenshots/Intro.png)
-![Dashboard Preview](screenshots/Financial_performance.png)
+![Dashboard Preview](screenshots/Financial_Performance.png)
 ![Dashboard Preview](screenshots/Product_Analysis.png)
 ![Dashboard Preview](screenshots/Customer_Structure_and_Concentration.png)
 ---

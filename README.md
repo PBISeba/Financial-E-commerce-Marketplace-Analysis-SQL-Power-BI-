@@ -126,6 +126,11 @@ Key insights:
 
 ---
 
+### SQL vs DAX (Work in Progress)
+
+
+---
+
 ## Technical Stack
 
 Power BI  

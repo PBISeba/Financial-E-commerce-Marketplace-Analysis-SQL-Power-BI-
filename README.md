@@ -13,6 +13,10 @@ The dashboard focuses on:
 • Customer structure and revenue concentration  
 • Product category performance and demand patterns  
 
+## Dashboard Preview
+
+![Dashboard Overview](screenshots/financial_performance.png)
+
 ## SQL Data Preparation
 
 Part of the data transformation logic was implemented in SQL before loading into Power BI.

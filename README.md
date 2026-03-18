@@ -78,7 +78,7 @@ Dimensions:
 
 Additional helper tables were implemented for dynamic report features (Top-N, currency switch, filters).
 
-![Data Model](screenshots/data_model.png)
+![Data Model](screenshots/Data_Model.png)
 
 ---
 

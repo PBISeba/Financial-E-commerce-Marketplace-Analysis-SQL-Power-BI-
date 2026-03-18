@@ -15,7 +15,7 @@ The dashboard focuses on:
 
 ## Dashboard Preview
 
-![Dashboard Overview](screenshots/financial_performance.png)
+![Dashboard Preview](screenshots/financial_performance.png)
 
 ## SQL Data Preparation
 
@@ -29,6 +29,22 @@ Key SQL components:
 • Pre-calculated metrics to improve performance  
 
 This approach reduces model complexity in Power BI and improves report performance.
+
+## Dataset
+
+The dataset represents a Brazilian e-commerce marketplace and includes:
+
+• Orders and transaction data  
+• Customer information and geographic location  
+• Product categories  
+• Revenue metrics  
+
+Time range: **2016–2018**
+
+Currency: **BRL with dynamic USD conversion**
+
+The dataset structure follows a **star schema data model** optimized for analytical queries.
+
 
 ## Data Model
 
@@ -47,6 +63,46 @@ Dimensions:
 
 Additional helper tables were implemented for dynamic report features (Top-N, currency switch, filters).
 
+![Data Model](screenshots/data_model.png)
+
+## Key Features
+
+• Dynamic currency switch (BRL / USD)  
+• Top-N analysis with automatic "Others" grouping  
+• Pareto analysis for revenue concentration  
+• Interactive filter panel (time, geography, product)  
+• KPI overview for financial and operational metrics  
+• Cross-filtering across all visuals
+
+## Dashboard Pages
+
+### Financial Performance
+Analysis of revenue trends, customer activity and overall marketplace performance.
+
+Key insights:
+• Revenue trends over time  
+• Year-over-year growth  
+• Revenue distribution across product categories  
+
+---
+
+### Customer Structure & Concentration
+Analysis of customer distribution and revenue concentration across regions.
+
+Key insights:
+• Pareto analysis of revenue by state  
+• Customer distribution across key regions  
+• ARPU comparison across top states  
+
+---
+
+### Product Analysis
+Evaluation of product category performance and demand patterns.
+
+Key insights:
+• Revenue vs order volume by category  
+• Product category revenue distribution  
+• Average revenue per customer by category
 
 ## Technical Stack
 
@@ -56,8 +112,6 @@ SQL (PostgreSQL)
 Data Modeling (Star Schema)  
 Power Query  
 Interactive dashboard design
-
-
 
 
 

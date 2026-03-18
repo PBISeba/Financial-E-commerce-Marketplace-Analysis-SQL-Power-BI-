@@ -1,5 +1,12 @@
-# Financial-E-commerce-Marketplace-Analysis-SQL-Power-BI-
- End-to-end business intelligence project combining SQL data transformation and Power BI analytics. The project focuses on financial performance, customer structure, and product category dynamics in a Brazilian e-commerce marketplace.
+# Financial E-commerce Marketplace Analysis (SQL + Power BI)
+
+End-to-end business intelligence project combining SQL data transformation and Power BI analytics.
+
+Designed as a portfolio-ready BI solution demonstrating a full analytics workflow — from data preparation to interactive dashboarding.
+
+The project focuses on financial performance, customer structure, and product category dynamics in a Brazilian e-commerce marketplace.
+
+---
 
 ## Project Overview
 
@@ -13,9 +20,13 @@ The dashboard focuses on:
 • Customer structure and revenue concentration  
 • Product category performance and demand patterns  
 
+---
+
 ## Dashboard Preview
 
 ![Dashboard Preview](screenshots/financial_performance.png)
+
+---
 
 ## SQL Data Preparation
 
@@ -28,23 +39,25 @@ Key SQL components:
 • Data cleaning and transformation logic  
 • Pre-calculated metrics to improve performance  
 
-This approach reduces model complexity in Power BI and improves report performance.
+This approach reduces model complexity, improves performance, and separates transformation logic from the reporting layer.
+
+---
 
 ## Dataset
 
-The dataset represents a Brazilian e-commerce marketplace and includes:
+The dataset represents a Brazilian e-commerce marketplace (Olist-style transactional dataset) and includes:
 
 • Orders and transaction data  
 • Customer information and geographic location  
 • Product categories  
 • Revenue metrics  
 
-Time range: **2016–2018**
-
+Time range: **2016–2018**  
 Currency: **BRL with dynamic USD conversion**
 
 The dataset structure follows a **star schema data model** optimized for analytical queries.
 
+---
 
 ## Data Model
 
@@ -52,7 +65,7 @@ The report uses a star schema model with SQL-based pre-aggregations.
 
 Fact table:
 
-• fact_sales – transactional order data
+• fact_sales – transactional order data  
 
 Dimensions:
 
@@ -65,6 +78,8 @@ Additional helper tables were implemented for dynamic report features (Top-N, cu
 
 ![Data Model](screenshots/data_model.png)
 
+---
+
 ## Key Features
 
 • Dynamic currency switch (BRL / USD)  
@@ -72,12 +87,15 @@ Additional helper tables were implemented for dynamic report features (Top-N, cu
 • Pareto analysis for revenue concentration  
 • Interactive filter panel (time, geography, product)  
 • KPI overview for financial and operational metrics  
-• Cross-filtering across all visuals
+• Cross-filtering across all visuals  
+• Separation of SQL and DAX logic for performance and scalability  
+
+---
 
 ## Dashboard Pages
 
 ### Financial Performance
-Analysis of revenue trends, customer activity and overall marketplace performance.
+Analysis of revenue trends, growth dynamics, and overall marketplace performance.
 
 Key insights:
 • Revenue trends over time  
@@ -102,7 +120,9 @@ Evaluation of product category performance and demand patterns.
 Key insights:
 • Revenue vs order volume by category  
 • Product category revenue distribution  
-• Average revenue per customer by category
+• Average revenue per customer by category  
+
+---
 
 ## Technical Stack
 
@@ -111,8 +131,4 @@ DAX
 SQL (PostgreSQL)  
 Data Modeling (Star Schema)  
 Power Query  
-Interactive dashboard design
-
-
-
-
+Interactive dashboard design  

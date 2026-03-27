@@ -43,7 +43,7 @@ The dashboard focuses on:
 ![Dashboard Preview](screenshots/Financial_Performance.png)
 ![Dashboard Preview](screenshots/Customer_Structure_and_Concentration.png)
 ![Dashboard Preview](screenshots/Product_Analysis.png)
-![Dashboard Preview](sceenshots/Video_preview.mp4)
+![Dashboard Preview](screenshots/Video_preview.mp4)
 
 ---
 
